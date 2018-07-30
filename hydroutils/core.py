@@ -313,8 +313,6 @@ def auto_fit(sample):
     df['cdf'] = cdfs
 
     for i in range(len(cdfs)):
-        
-        # print(cdfs[i])
 
         # Fit our data set against every probability distribution
         parameters = eval("stats."+cdfs[i]+".fit(sample)");
@@ -326,6 +324,6 @@ def auto_fit(sample):
         df.loc[i,'D'] = D
 
         best_cdf = df.loc[df['D'] == df.D.min(),'cdf'].values[0]
-        dist     = eval("stats."+best_cdf)
+        dist     = eval("stats." + best_cdf)
         
     return dist
