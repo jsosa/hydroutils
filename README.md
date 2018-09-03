@@ -7,7 +7,6 @@
 - Annual maxima estimation
 - Statistical distribution fitting
 - Distribution parameters estimation based on L-moments or MLE
-- 
 
 ### Installation
 
@@ -33,7 +32,7 @@ import hydroutils.core as hu
 
 ![pic01](images/pic01.png?raw=true)
 
-Annual maxima (AMAX) is calculated via producing a `pd.DataFrame` object:
+Annual maxima (AMAX) is calculated via:
 
 ```python
 hu.find_events_amax(serie)
@@ -41,7 +40,7 @@ hu.find_events_amax(serie)
 
 ![pic02](images/pic02.png?raw=true)
 
-where serie is the `pd.DataFrame` object defined before
+where `serie` is the `pd.DataFrame` object defined before
 
 AMAX can be visualized via:
 
@@ -67,7 +66,7 @@ where `amax_vals` is the `pd.DataFrame` object obtained in the previous step `hu
 
 In hydrology is preferred to work with Return Periods, then a function has been created to retreive corresponding discharge value to a given return period
 
-Retrive discharge for value for a given return period can be done via:
+Retrive discharge for a given return period can be done via:
 
 ```python
 hu.get_dis_rp(amax.values,hu.stats.pearson3,ret,'mle')
