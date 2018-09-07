@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/142293956.svg)](https://zenodo.org/badge/latestdoi/142293956)
+
 # hydroutils
 
 `hydroutils` is a small python library to solve common problems in Hydrology
