@@ -257,7 +257,7 @@ def plot_return(data, dist, params):
 
     x, y = _get_weibull_return(data)
 
-    xx = np.linspace(0, 100, 10000)
+    xx = np.linspace(1e-6, 100, 10000)
     fit = get_params(data, dist, params)
     yy = dist.ppf(1-1/xx, *fit)
 
